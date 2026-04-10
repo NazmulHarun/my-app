@@ -646,3 +646,31 @@
 <script src="script.js"></script>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+const supabaseUrl = "https://hnufojpbdjzwjndhcpas.supabase.co"
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhudWZvanBiZGp6d2puZGhjcGFzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3MDY1MTIsImV4cCI6MjA5MTI4MjUxMn0.nOeGvaXowhXDjeI1_9Qzmzxn7RLe8koFZvF4_ylyv_Q"
+
+const supabase = supabase.createClient(supabaseUrl, supabaseKey)
+
+// Insert data
+async function addUser() {
+  const { data, error } = await supabase
+    .from('users')
+    .insert([
+      { name: "Nazmul", email: "nazmul@example.com" }
+    ])
+
+  console.log(data, error)
+}
+
+// Fetch data
+async function getUsers() {
+  const { data, error } = await supabase
+    .from('users')
+    .select("*")
+
+  console.log(data)
+}
+</script>
