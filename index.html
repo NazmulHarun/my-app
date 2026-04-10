@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IslamQA — Your trusted source for Islamic knowledge. Browse articles on Fiqh, Aqeedah, Hadith, Tafsir and get answers from qualified scholars." />
+  <meta name="keywords" content="IslamQA, Islamic Q&A, Fiqh, Aqeedah, Hadith, Tafsir, Islamic articles" />
+  <meta name="author" content="IslamQA" />
+  <title>IslamQA — Islamic Questions & Answers</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header class="site-header" role="banner">
+  <nav class="container nav-inner" aria-label="Main navigation">
+
+    <a href="index.html" class="nav-logo" aria-label="IslamQA homepage">
+      <div class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-5h2v2h-2zm0-8h2v6h-2z"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <strong>IslamQA</strong>
+        <span>Knowledge &amp; Answers</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#qa">Q &amp; A</a></li>
+      <li><a href="article.html">Sample Article</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="nav-search-btn" id="openSearchBtn" aria-label="Open search" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+      </button>
+      <a href="#ask" class="btn btn-primary nav-cta">Ask a Question</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" type="button"
+      aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+
+  </nav>
+</header>
+
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+<main id="main-content">
+
+
+  <!-- ========================================================
+       HERO SECTION
+  ======================================================== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left content -->
+        <div class="hero-left">
+          <div class="hero-eyebrow fade-up">Scholarly Islamic Knowledge</div>
+
+          <h1 id="hero-heading" class="fade-up delay-1">
+            Find Answers Rooted in<br><em>Quran &amp; Sunnah</em>
+          </h1>
+
+          <p class="hero-desc fade-up delay-2">
+            IslamQA brings together verified answers from qualified scholars on Fiqh,
+            Aqeedah, Hadith, Tafsir, and daily Islamic life — clearly explained and
+            easy to find.
+          </p>
+
+          <div class="hero-search fade-up delay-3">
+            <label for="site-search">Search IslamQA</label>
+            <input
+              type="search"
+              id="site-search"
+              class="hero-search-input"
+              placeholder="e.g. How to perform Wudu correctly?"
+              autocomplete="off"
+              aria-label="Search Islamic topics"
+            />
+            <button class="hero-search-btn" id="searchBtn" type="button" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="hero-chips fade-up delay-4" aria-label="Popular searches">
+            <button class="hero-chip" type="button" data-query="Wudu">Wudu</button>
+            <button class="hero-chip" type="button" data-query="Tawheed">Tawheed</button>
+            <button class="hero-chip" type="button" data-query="Zakah rules">Zakah</button>
+            <button class="hero-chip" type="button" data-query="Sunnah prayer">Sunnah Prayer</button>
+            <button class="hero-chip" type="button" data-query="Tawbah">Tawbah</button>
+            <button class="hero-chip" type="button" data-query="Fasting">Fasting</button>
+          </div>
+        </div>
+
+        <!-- Right — quick Q cards -->
+        <div class="hero-right fade-in delay-2" aria-label="Recent questions">
+          <div class="hero-qcard">
+            <div class="hero-qcard-q">Is it permissible to perform Salah while wearing shoes?</div>
+            <div class="hero-qcard-meta">
+              <span class="badge">Fiqh</span>
+              <span class="hero-qcard-dot"></span>
+              <span>Sh. Ibrahim Al-Ansari</span>
+              <span class="hero-qcard-dot"></span>
+              <span>Answered</span>
+            </div>
+          </div>
+          <div class="hero-qcard">
+            <div class="hero-qcard-q">What is the difference between Fard and Wajib in the Hanafi school?</div>
+            <div class="hero-qcard-meta">
+              <span class="badge">Fiqh</span>
+              <span class="hero-qcard-dot"></span>
+              <span>Sh. Ahmad Al-Qasim</span>
+              <span class="hero-qcard-dot"></span>
+              <span>Answered</span>
+            </div>
+          </div>
+          <div class="hero-qcard">
+            <div class="hero-qcard-q">How does one know if their Tawbah has been accepted by Allah?</div>
+            <div class="hero-qcard-meta">
+              <span class="badge badge-gold">Spirituality</span>
+              <span class="hero-qcard-dot"></span>
+              <span>Sh. Rania Al-Faris</span>
+              <span class="hero-qcard-dot"></span>
+              <span>Answered</span>
+            </div>
+          </div>
+          <div class="hero-qcard">
+            <div class="hero-qcard-q">What is the nisab threshold for Zakah on gold and silver?</div>
+            <div class="hero-qcard-meta">
+              <span class="badge">Fiqh</span>
+              <span class="hero-qcard-dot"></span>
+              <span>Pending review</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       STATS BAR
+  ======================================================== -->
+  <div class="stats-bar" role="region" aria-label="Site statistics">
+    <div class="container stats-inner">
+      <div class="stat-item">
+        <span class="stat-num" id="stat-articles">1,200+</span>
+        <span class="stat-label">Articles</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="stat-qa">4,800+</span>
+        <span class="stat-label">Q&amp;A Answered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">38</span>
+        <span class="stat-label">Scholars</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">12</span>
+        <span class="stat-label">Categories</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">98%</span>
+        <span class="stat-label">Questions Answered</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================
+       ARTICLES SECTION
+  ======================================================== -->
+  <section id="articles" class="section articles-section" aria-labelledby="articles-heading">
+    <div class="container">
+
+      <div class="section-head">
+        <div>
+          <p class="section-label">Scholarly Content</p>
+          <h2 class="section-title" id="articles-heading">Featured Articles</h2>
+          <p class="section-subtitle">In-depth explanations reviewed and approved by qualified Islamic scholars.</p>
+        </div>
+        <a href="#" class="btn btn-secondary">View All Articles</a>
+      </div>
+
+      <!-- Loading state — shown until JS loads data -->
+      <div id="articles-loading" class="articles-grid" aria-hidden="true">
+        <div class="article-card article-card-featured" style="min-height:200px;">
+          <div class="card-content">
+            <div class="skeleton" style="height:14px;width:80px;margin-bottom:16px;"></div>
+            <div class="skeleton" style="height:24px;width:90%;margin-bottom:10px;"></div>
+            <div class="skeleton" style="height:14px;width:100%;margin-bottom:6px;"></div>
+            <div class="skeleton" style="height:14px;width:80%;"></div>
+          </div>
+        </div>
+        <div class="article-card" style="min-height:200px;">
+          <div class="card-content">
+            <div class="skeleton" style="height:12px;width:60px;margin-bottom:14px;"></div>
+            <div class="skeleton" style="height:18px;width:85%;margin-bottom:8px;"></div>
+            <div class="skeleton" style="height:12px;width:100%;margin-bottom:4px;"></div>
+            <div class="skeleton" style="height:12px;width:70%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Populated by script.js -->
+      <div id="articles-grid" class="articles-grid" style="display:none;" role="list"></div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       CATEGORIES SECTION
+  ======================================================== -->
+  <section id="categories" class="section categories-section" aria-labelledby="categories-heading">
+    <div class="container">
+
+      <div class="section-head">
+        <div>
+          <p class="section-label">Browse Topics</p>
+          <h2 class="section-title" id="categories-heading">Explore by Category</h2>
+        </div>
+      </div>
+
+      <div id="categories-grid" class="categories-grid" role="list">
+        <!-- Populated by script.js or static fallback below -->
+        <div class="category-card" role="listitem" tabindex="0" data-query="Fiqh">
+          <span class="cat-icon" aria-hidden="true">⚖️</span>
+          <div class="cat-name">Fiqh</div>
+          <div class="cat-count">342 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Aqeedah">
+          <span class="cat-icon" aria-hidden="true">🌙</span>
+          <div class="cat-name">Aqeedah</div>
+          <div class="cat-count">218 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Hadith">
+          <span class="cat-icon" aria-hidden="true">📖</span>
+          <div class="cat-name">Hadith</div>
+          <div class="cat-count">410 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Tafsir">
+          <span class="cat-icon" aria-hidden="true">✨</span>
+          <div class="cat-name">Tafsir</div>
+          <div class="cat-count">185 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Seerah">
+          <span class="cat-icon" aria-hidden="true">🕌</span>
+          <div class="cat-name">Seerah</div>
+          <div class="cat-count">126 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Spirituality">
+          <span class="cat-icon" aria-hidden="true">💚</span>
+          <div class="cat-name">Spirituality</div>
+          <div class="cat-count">97 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Dua Dhikr">
+          <span class="cat-icon" aria-hidden="true">🤲</span>
+          <div class="cat-name">Du'a &amp; Dhikr</div>
+          <div class="cat-count">153 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Family">
+          <span class="cat-icon" aria-hidden="true">👨‍👩‍👧</span>
+          <div class="cat-name">Family</div>
+          <div class="cat-count">89 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Finance Zakah">
+          <span class="cat-icon" aria-hidden="true">💰</span>
+          <div class="cat-name">Finance</div>
+          <div class="cat-count">74 articles</div>
+        </div>
+        <div class="category-card" role="listitem" tabindex="0" data-query="Ethics Islam">
+          <span class="cat-icon" aria-hidden="true">🌍</span>
+          <div class="cat-name">Ethics</div>
+          <div class="cat-count">61 articles</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       Q&A SECTION
+  ======================================================== -->
+  <section id="qa" class="section qa-section" aria-labelledby="qa-heading">
+    <div class="container">
+
+      <div class="section-head">
+        <div>
+          <p class="section-label">Verified Answers</p>
+          <h2 class="section-title" id="qa-heading">Latest Questions &amp; Answers</h2>
+          <p class="section-subtitle">Answered by qualified scholars — referenced and verified.</p>
+        </div>
+        <a href="#ask" class="btn btn-secondary">Ask Your Question</a>
+      </div>
+
+      <div class="qa-layout">
+
+        <!-- Accordion list -->
+        <div class="qa-list" id="qaList" role="list">
+
+          <!-- Q&A Item 1 -->
+          <div class="qa-item" role="listitem">
+            <div class="qa-question" tabindex="0" role="button" aria-expanded="false" aria-controls="qa-ans-1">
+              <div class="qa-q-icon" aria-hidden="true">Q</div>
+              <p class="qa-q-text">Is it permissible to perform Salah while wearing shoes?</p>
+              <span class="qa-toggle-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="qa-answer" id="qa-ans-1" role="region">
+              <div class="qa-answer-body">
+                <p class="qa-answer-text">
+                  Yes, it is permissible to pray with shoes on, provided the shoes are pure (tahir)
+                  and free from impurity. The Prophet ﷺ prayed in his shoes and also without them.
+                  Scholars consider it permissible and sometimes a Sunnah in open areas. Be mindful
+                  that the prayer area is not made impure and that it does not cause distraction in
+                  a mosque setting.
+                </p>
+                <div class="qa-answer-meta">
+                  <span class="badge">Fiqh</span>
+                  <span class="scholar-name">Sh. Ibrahim Al-Ansari</span>
+                  <span class="hero-qcard-dot"></span>
+                  <span class="answer-date">15 Jan 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q&A Item 2 -->
+          <div class="qa-item" role="listitem">
+            <div class="qa-question" tabindex="0" role="button" aria-expanded="false" aria-controls="qa-ans-2">
+              <div class="qa-q-icon" aria-hidden="true">Q</div>
+              <p class="qa-q-text">What is the ruling on missing a day of fasting in Ramadan due to illness?</p>
+              <span class="qa-toggle-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="qa-answer" id="qa-ans-2" role="region">
+              <div class="qa-answer-body">
+                <p class="qa-answer-text">
+                  A person who misses fasting due to illness has a valid excuse and is not sinful.
+                  They must make up (qada) the missed days after Ramadan upon recovery. Allah says:
+                  "Whoever is ill or on a journey, then an equal number of other days" (2:185).
+                  If the illness is chronic with no hope of recovery, fidyah may be paid instead.
+                </p>
+                <div class="qa-answer-meta">
+                  <span class="badge">Fiqh</span>
+                  <span class="scholar-name">Sh. Muhammad Al-Kurdi</span>
+                  <span class="hero-qcard-dot"></span>
+                  <span class="answer-date">10 Jan 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q&A Item 3 -->
+          <div class="qa-item" role="listitem">
+            <div class="qa-question" tabindex="0" role="button" aria-expanded="false" aria-controls="qa-ans-3">
+              <div class="qa-q-icon" aria-hidden="true">Q</div>
+              <p class="qa-q-text">How does one know if their sincere repentance (Tawbah) has been accepted?</p>
+              <span class="qa-toggle-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="qa-answer" id="qa-ans-3" role="region">
+              <div class="qa-answer-body">
+                <p class="qa-answer-text">
+                  Scholars mention several signs: (1) genuine change in the heart, (2) avoidance
+                  of the sin and its pathways, (3) increased fear of Allah, (4) the sin no longer
+                  holds appeal. Acceptance is ultimately known only to Allah. Combine hope in His
+                  mercy with continued striving and never fall into despair.
+                </p>
+                <div class="qa-answer-meta">
+                  <span class="badge badge-gold">Spirituality</span>
+                  <span class="scholar-name">Sh. Rania Al-Faris</span>
+                  <span class="hero-qcard-dot"></span>
+                  <span class="answer-date">8 Jan 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q&A Item 4 -->
+          <div class="qa-item" role="listitem">
+            <div class="qa-question" tabindex="0" role="button" aria-expanded="false" aria-controls="qa-ans-4">
+              <div class="qa-q-icon" aria-hidden="true">Q</div>
+              <p class="qa-q-text">What is the difference between Fard and Wajib in the Hanafi school?</p>
+              <span class="qa-toggle-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="qa-answer" id="qa-ans-4" role="region">
+              <div class="qa-answer-body">
+                <p class="qa-answer-text">
+                  In the Hanafi school, Fard is established by definitive evidence (qat'i) while
+                  Wajib is established by speculative evidence (zanni). Denying a Fard takes one
+                  out of Islam; denying a Wajib does not. Example: Salah is Fard; Witr is Wajib.
+                  This affects rulings in prayer, zakah, and hajj.
+                </p>
+                <div class="qa-answer-meta">
+                  <span class="badge">Fiqh</span>
+                  <span class="scholar-name">Sh. Ahmad Al-Qasim</span>
+                  <span class="hero-qcard-dot"></span>
+                  <span class="answer-date">5 Jan 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /qa-list -->
+
+        <!-- Sidebar -->
+        <aside class="qa-sidebar" aria-label="Q&A information">
+          <div class="qa-sidebar-card">
+            <h3>Q&amp;A at a Glance</h3>
+            <p>All answers are verified by qualified Islamic scholars with isnads and references.</p>
+            <div class="qa-sidebar-stats">
+              <div class="qa-stat-chip">
+                <strong id="sidebar-answered">4,800+</strong>
+                <span>Answered</span>
+              </div>
+              <div class="qa-stat-chip">
+                <strong>38</strong>
+                <span>Scholars</span>
+              </div>
+              <div class="qa-stat-chip">
+                <strong>&lt; 3 days</strong>
+                <span>Avg. response</span>
+              </div>
+              <div class="qa-stat-chip">
+                <strong>12</strong>
+                <span>Topics</span>
+              </div>
+            </div>
+          </div>
+          <div class="qa-sidebar-card">
+            <h3>Before You Ask</h3>
+            <p>Search first — your question may already be answered. Include as much detail as possible for the most accurate response.</p>
+            <a href="#ask" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:4px;">Ask a Scholar →</a>
+          </div>
+        </aside>
+
+      </div><!-- /qa-layout -->
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       ASK A QUESTION SECTION
+  ======================================================== -->
+  <section id="ask" class="section ask-section" aria-labelledby="ask-heading">
+    <div class="container">
+      <div class="ask-inner">
+
+        <div class="ask-left">
+          <h2 id="ask-heading">Have a Question?<br>Ask Our Scholars.</h2>
+          <p>
+            Submit your question and a qualified Islamic scholar will provide a
+            researched, referenced answer — in sha Allah within 3 days.
+          </p>
+          <div class="ask-note">
+            Your identity is kept private. All questions are reviewed before publishing.
+          </div>
+        </div>
+
+        <form class="ask-form" id="askForm" novalidate aria-label="Submit a question">
+
+          <div class="form-group">
+            <label for="q-question">Your Question <span aria-hidden="true">*</span></label>
+            <textarea
+              id="q-question"
+              class="form-control"
+              name="question"
+              placeholder="Write your question clearly and in full…"
+              rows="4"
+              maxlength="1000"
+              required
+              aria-required="true"
+            ></textarea>
+            <span class="form-error" id="err-question" role="alert"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-category">Category <span aria-hidden="true">*</span></label>
+              <select id="q-category" class="form-control" name="category" required aria-required="true">
+                <option value="">Select topic…</option>
+                <option value="Fiqh">Fiqh</option>
+                <option value="Aqeedah">Aqeedah</option>
+                <option value="Hadith">Hadith</option>
+                <option value="Tafsir">Tafsir</option>
+                <option value="Seerah">Seerah</option>
+                <option value="Spirituality">Spirituality</option>
+                <option value="Family">Family</option>
+                <option value="Finance">Finance</option>
+                <option value="Ethics">Ethics</option>
+              </select>
+              <span class="form-error" id="err-category" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="q-name">Your Name <span style="opacity:0.6;font-size:0.75rem;">(optional)</span></label>
+              <input
+                type="text"
+                id="q-name"
+                class="form-control"
+                name="submittedBy"
+                placeholder="Anonymous"
+                maxlength="80"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            Submit Question
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+</main><!-- /main -->
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <div class="logo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-5h2v2h-2zm0-8h2v6h-2z" fill="white"/>
+            </svg>
+          </div>
+          <strong>IslamQA</strong>
+        </div>
+        <p class="footer-tagline">
+          Connecting Muslims with authenticated Islamic knowledge from qualified scholars — since 2024.
+        </p>
+        <p class="footer-ayah">"وَقُل رَّبِّ زِدۡنِي عِلۡمٗا" — Quran 20:114</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Q &amp; A Archive</a></li>
+          <li><a href="#">Video Lessons</a></li>
+          <li><a href="#">Hadith Library</a></li>
+          <li><a href="#">Quran Study</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="#">Aqeedah</a></li>
+          <li><a href="#">Fiqh</a></li>
+          <li><a href="#">Tafsir</a></li>
+          <li><a href="#">Seerah</a></li>
+          <li><a href="#">Spirituality</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#">About IslamQA</a></li>
+          <li><a href="#">Our Scholars</a></li>
+          <li><a href="#ask">Ask a Question</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 IslamQA. All rights reserved. Content reviewed by qualified scholars.</p>
+      <p><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Methodology</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     SEARCH OVERLAY
+============================================================ -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="search-box">
+    <div class="search-box-top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;color:var(--ink-muted)">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input
+        type="search"
+        id="overlay-search-input"
+        class="search-box-input"
+        placeholder="Search articles, Q&A, scholars…"
+        autocomplete="off"
+        aria-label="Search"
+      />
+      <button class="search-close" id="closeSearchBtn" type="button" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-results" id="searchResults" role="list"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     TOAST NOTIFICATION
+============================================================ -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast-icon" id="toastIcon">✓</span>
+  <span id="toastMsg"></span>
+</div>
+
+
+<!-- script.js — all interactivity, no inline JS in HTML -->
+<script src="script.js"></script>
+</body>
+</html>
